@@ -1,7 +1,7 @@
-// App.jsx
 import React from 'react';
-import Hexinyi from'./hexinyi/Hexinyi'
+import Hexinyi from './hexinyi/Hexinyi';
 import useGlobalStore from './useGlobalStore';
+import Ctt from './Chengtingting/Ctt';
 import {
     generateComponentStyles,
     generateHorizontalContainerStyle,
@@ -85,10 +85,12 @@ function App() {
                 </div>
             )}
             {isLoggedIn && allComponentsVisible && (
-                <div style={generateHorizontalContainerStyle()}>
-                    <div style={generateComponentStyles()}>
+                <div style={{...generateHorizontalContainerStyle(), display: 'flex', justifyContent: 'space-around' }}>
+                    <div style={{...generateComponentStyles(), border: '1px solid #ccc', padding: '1rem' }}>
                         <Hexinyi />
-                    
+                    </div>
+                    <div style={{...generateComponentStyles(), border: '1px solid #ccc', padding: '1rem' }}>
+                        <Ctt />
                     </div>
                 </div>
             )}
@@ -96,4 +98,4 @@ function App() {
     );
 }
 
-export default App;
+export default App;    
