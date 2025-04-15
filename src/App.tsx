@@ -6,6 +6,7 @@ import {
     generateHorizontalContainerStyle,
 } from './styleGenerator';
 import Maowenhui from './Maowenhui/Maowenhui';
+import Qinlinxiang from'./Qinlinxiang/Qinlinxiang';
 
 function App() {
     const {
@@ -91,6 +92,9 @@ function App() {
                     </div>
                     <div style={generateComponentStyles()}>
                         <Maowenhui />
+                    </div>
+                    <div style={generateComponentStyles()}>
+                        <Qinlinxiang  />
                     </div>
                 </div>
             )}
