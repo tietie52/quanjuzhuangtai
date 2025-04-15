@@ -1,11 +1,11 @@
-// App.jsx
 import React from 'react';
-import Hexinyi from'./hexinyi/Hexinyi'
+import Hexinyi from './hexinyi/Hexinyi';
 import useGlobalStore from './useGlobalStore';
 import {
     generateComponentStyles,
     generateHorizontalContainerStyle,
 } from './styleGenerator';
+import Maowenhui from './Maowenhui/Maowenhui';
 
 function App() {
     const {
@@ -88,7 +88,9 @@ function App() {
                 <div style={generateHorizontalContainerStyle()}>
                     <div style={generateComponentStyles()}>
                         <Hexinyi />
-                    
+                    </div>
+                    <div style={generateComponentStyles()}>
+                        <Maowenhui />
                     </div>
                 </div>
             )}
@@ -97,3 +99,4 @@ function App() {
 }
 
 export default App;
+    
