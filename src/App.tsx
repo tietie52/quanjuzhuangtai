@@ -2,12 +2,13 @@ import React from 'react';
 import Hexinyi from './hexinyi/Hexinyi';
 import useGlobalStore from './useGlobalStore';
 import Ctt from './Chengtingting/Ctt';
+import Maowenhui from './Maowenhui/Maowenhui';
+import Qinlinxiang from './Qinlinxiang/Qinlinxiang';
+import Zhongxinna from './Zhongxinna/Zhongxinna'; 
 import {
     generateComponentStyles,
     generateHorizontalContainerStyle,
 } from './styleGenerator';
-import Maowenhui from './Maowenhui/Maowenhui';
-import Qinlinxiang from'./Qinlinxiang/Qinlinxiang';
 
 function App() {
     const {
@@ -91,16 +92,17 @@ function App() {
                     <div style={{...generateComponentStyles(), border: '1px solid #ccc', padding: '1rem' }}>
                         <Hexinyi />
                     </div>
-<<<<<<< HEAD
                     <div style={{...generateComponentStyles(), border: '1px solid #ccc', padding: '1rem' }}>
                         <Ctt />
-=======
+                    </div>
                     <div style={generateComponentStyles()}>
                         <Maowenhui />
                     </div>
                     <div style={generateComponentStyles()}>
                         <Qinlinxiang  />
->>>>>>> 36da2fadb36ff4b735823d794c6b698d559b4f12
+                    </div>
+                    <div style={generateComponentStyles()}>
+                        <Zhongxinna />
                     </div>
                 </div>
             )}
@@ -108,9 +110,4 @@ function App() {
     );
 }
 
-<<<<<<< HEAD
-export default App;    
-=======
 export default App;
-    
->>>>>>> 36da2fadb36ff4b735823d794c6b698d559b4f12
