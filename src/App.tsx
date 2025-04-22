@@ -5,6 +5,7 @@ import Ctt from './Chengtingting/Ctt';
 import Maowenhui from './Maowenhui/Maowenhui';
 import Qinlinxiang from './Qinlinxiang/Qinlinxiang';
 import Zhongxinna from './Zhongxinna/Zhongxinna'; 
+import Zhouxiaowen from './Zhouxiaowen/Zhouxiaowen'
 import {
     generateComponentStyles,
     generateHorizontalContainerStyle,
@@ -104,6 +105,9 @@ function App() {
                     </div>
                     <div style={{...generateComponentStyles(), backgroundColor: getRandomColor() }}>
                         <Zhongxinna />
+                    </div>
+                    <div style={{...generateComponentStyles(), backgroundColor: getRandomColor() }}>
+                        <Zhouxiaowen />
                     </div>
                 </div>
             )}
