@@ -20,6 +20,7 @@ function App() {
         login,
         logout,
         hasPermission,
+        getRandomColor
     } = useGlobalStore();
 
     const correctPassword = '666666';
@@ -89,19 +90,19 @@ function App() {
             )}
             {isLoggedIn && allComponentsVisible && (
                 <div style={{...generateHorizontalContainerStyle(), display: 'flex', justifyContent: 'space-around' }}>
-                    <div style={{...generateComponentStyles(), border: '1px solid #ccc', padding: '1rem' }}>
+                    <div style={{...generateComponentStyles(), border: '1px solid #ccc', padding: '1rem', backgroundColor: getRandomColor() }}>
                         <Hexinyi />
                     </div>
-                    <div style={{...generateComponentStyles(), border: '1px solid #ccc', padding: '1rem' }}>
+                    <div style={{...generateComponentStyles(), border: '1px solid #ccc', padding: '1rem', backgroundColor: getRandomColor() }}>
                         <Ctt />
                     </div>
-                    <div style={generateComponentStyles()}>
+                    <div style={{...generateComponentStyles(), backgroundColor: getRandomColor() }}>
                         <Maowenhui />
                     </div>
-                    <div style={generateComponentStyles()}>
+                    <div style={{...generateComponentStyles(), backgroundColor: getRandomColor() }}>
                         <Qinlinxiang  />
                     </div>
-                    <div style={generateComponentStyles()}>
+                    <div style={{...generateComponentStyles(), backgroundColor: getRandomColor() }}>
                         <Zhongxinna />
                     </div>
                 </div>
@@ -110,4 +111,4 @@ function App() {
     );
 }
 
-export default App;
+export default App;    

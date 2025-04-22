@@ -1,4 +1,3 @@
-// useGlobalStore.js
 import { create } from 'zustand';
 
 // 定义用户信息的类型
@@ -14,11 +13,21 @@ type GlobalState = {
     isLoggedIn: boolean;
     userInfo: UserInfo;
     userPermissions: string[];
+    getRandomColor: () => string;
     toggleTheme: () => void;
     toggleAllComponentsVisibility: () => void;
     login: (userData: UserInfo, permissions: string[]) => void;
     logout: () => void;
     hasPermission: (permission: string) => boolean;
+};
+
+const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 };
 
 const useGlobalStore = create<GlobalState>((set) => ({
@@ -27,6 +36,7 @@ const useGlobalStore = create<GlobalState>((set) => ({
     isLoggedIn: false,
     userInfo: { name: '', email: '' },
     userPermissions: [],
+    getRandomColor: getRandomColor,
     toggleTheme: () =>
         set((state) => ({
             theme: state.theme === 'light' ? 'dark' : 'light',
@@ -51,4 +61,4 @@ const useGlobalStore = create<GlobalState>((set) => ({
     },
 }));
 
-export default useGlobalStore;
+export default useGlobalStore;    
